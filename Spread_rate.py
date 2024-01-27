@@ -60,4 +60,4 @@ if initial_infected<population_size:
   simulation_days = st.number_input("Enter the duration(in days) for you want to check spread:", min_value=1, step=1)
   run_seir_model(population_size, initial_infected, beta, sigma, gamma, simulation_days)
 else:
-  st.write("initial infected people should be less than or equal of total population")
+  st.write("initial infected people should be less than total population")
