@@ -134,7 +134,7 @@ population_size = st.number_input("Enter the total population size:", min_value=
 initial_infected = st.number_input("Enter the initial number of infected individuals:", min_value=0.0, step=1.0)
 if initial_infected<population_size:
     crowd_density = st.selectbox("Select crowd density (its scale not no. of people):", ['Very Low (1-2)', 'Low (3-4)', 'Moderate (5-6)', 'High (7-8)', 'Very High (9-10)'])
-    latent_period = st.number_input("Enter the latent period (in days):", min_value=0.0, step=1.0)
+    latent_period = st.number_input("Enter the time period for a person to be able to infect others:", min_value=0.0, step=1.0)
     recovery_period = st.number_input("Enter the recovery period (in days):", min_value=0.0, step=1.0)
     simulation_days = st.number_input("Enter the duration(in days) for you want to check spread:", min_value=1, step=1)
     run_seir_model(population_size, initial_infected, crowd_density, latent_period, recovery_period, simulation_days)
